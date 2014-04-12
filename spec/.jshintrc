@@ -1,5 +1,5 @@
 {
-  "globals" : {
+  "predef" : {
     "mocha" : true,
     "sinon" : true,
     "should" : true,

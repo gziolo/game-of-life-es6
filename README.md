@@ -68,6 +68,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 
 ### Grunt build tasks ###
 - [Grunt](http://gruntjs.com/)
+- [JSHint](http://www.jshint.com/docs/)
 - [Karma](http://karma-runner.github.io/)
 - [Mocha](http://visionmedia.github.io/mocha/)
 - [ChaiJS online test suite](http://chaijs.com/api/test/)
