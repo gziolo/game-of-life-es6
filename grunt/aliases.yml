@@ -1,7 +1,10 @@
 dependencies:
   - 'devUpdate'
+verify:
+  - 'jshint'
+  - 'karma:unit'
 build:
   - 'jshint'
-  - 'karma'
+  - 'karma:continuous'
 default:
   - 'build'

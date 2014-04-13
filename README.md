@@ -55,7 +55,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Principles of Object Oriented Design](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 - [Is Design Dead? - article by Martin Fowler](http://martinfowler.com/articles/designDead.html)
 - [Don't Repeat Yourself](http://c2.com/cgi/wiki?DontRepeatYourself)
-- [XP Simplicty Rules](Xp Simplicity Rules)
+- [XP Simplicty Rules](http://c2.com/xp/XpSimplicityRules.html)
 - [Understanding the Four Rules of Simple Design - book by Corey Haines](https://leanpub.com/4rulesofsimpledesign)
 - [The Four Elements of Simple Design](http://www.jbrains.ca/permalink/the-four-elements-of-simple-design)
 
@@ -75,7 +75,6 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Sinon docs](http://sinonjs.org/docs/)
 - [Grunt basics](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
 - [How to squeeze the most out of your build configuration](http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/)
-- [Code Coverage of Mocha Tests using Istanbul and Karma](http://ariya.ofilabs.com/2013/12/code-coverage-of-mocha-tests-using-istanbul-and-karma.html)
 - [Testing Asynchronous JavaScript](http://martinfowler.com/articles/asyncJS.html)
 - [Using r.js to Optimize Your RequireJS Project](http://tech.pro/blog/1639/using-rjs-to-optimize-your-requirejs-project)
 
