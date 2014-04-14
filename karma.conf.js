@@ -1,7 +1,7 @@
 module.exports = function (config) {
   config.set({
     autoWatch: false,
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
     captureTimeout: 60000,
     client: {
       mocha: {
