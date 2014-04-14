@@ -7,7 +7,6 @@
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "strict": true,
   "trailing": true,
   "undef": true,
   "unused": "vars",
@@ -20,6 +19,7 @@
   "eqnull": true,
   "nomen": false,
   "expr": true,
+  "esnext": true,
   "predef": {
     "console": true,
     "require": true,

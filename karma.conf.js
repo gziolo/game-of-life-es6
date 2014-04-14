@@ -1,7 +1,7 @@
 module.exports = function (config) {
   config.set({
     autoWatch: false,
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
     captureTimeout: 60000,
     client: {
       mocha: {
@@ -10,14 +10,17 @@ module.exports = function (config) {
     },
     colors: true,
     files: [
-      {pattern: 'src/js/**/*.js', included: false},
-      {pattern: 'test/**/*Spec.js', included: false},
+      {pattern: 'src/js/**/*.es6', included: false},
+      {pattern: 'test/**/*Spec.es6', included: false},
 
       'test/test-main.js'
     ],
-    frameworks: ['requirejs', 'mocha', 'chai'],
+    frameworks: ['traceur', 'mocha', 'requirejs', 'chai'],
     logLevel: config.LOG_INFO,
     port: 9876,
+    preprocessors: {
+      '**/*.es6': ['traceur']
+    },
     reporters: ['progress'],
     singleRun: true
   });
