@@ -65,6 +65,8 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Traceur-TodoMVC – a Backbone.js app written with ES6](http://addyosmani.com/blog/traceur-todomvc/)
 - [Practical Workflows for ES6 Modules - video by Guy Bedford](https://www.youtube.com/watch?v=0VUjM-jJf2U)
 - [Practical Workflows for ES6 Modules - article by Guy Bedford](http://guybedford.com/practical-workflows-for-es6-modules)
+- [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
+- [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
 
 ### Grunt build tasks ###
 - [Grunt](http://gruntjs.com/)
