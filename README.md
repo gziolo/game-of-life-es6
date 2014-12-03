@@ -67,6 +67,9 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Practical Workflows for ES6 Modules - article by Guy Bedford](http://guybedford.com/practical-workflows-for-es6-modules)
 - [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
 - [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
+- [Author In ES6, Transpile To ES5 As A Build-step: A Workflow For Grunt](http://addyosmani.com/blog/author-in-es6-transpile-to-es5-as-a-build-step-a-workflow-for-grunt/)
+- [Using Grunt & the ES6 Module Transpiler](http://www.thomasboyt.com/2013/06/21/es6-module-transpiler)
+- [ES6 modules today with 6TO5](http://es6rocks.com/2014/10/es6-modules-today-with-6to5/)
 
 ### Grunt build tasks ###
 - [Grunt](http://gruntjs.com/)
