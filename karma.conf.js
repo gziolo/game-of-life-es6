@@ -10,18 +10,14 @@ module.exports = function (config) {
     },
     colors: true,
     files: [
-      {pattern: 'node_modules/chai/chai.js', included: false},
-      {pattern: 'src/js/**/*.es6', included: false},
-      {pattern: 'test/**/*Spec.es6', included: false},
+      {pattern: 'src/js/**/*.js', included: false},
+      {pattern: 'test/**/*Spec.js', included: false},
 
       'test/test-main.js'
     ],
-    frameworks: ['traceur', 'mocha', 'requirejs'],
+    frameworks: ['mocha', 'requirejs', 'sinon-chai'],
     logLevel: config.LOG_INFO,
     port: 9876,
-    preprocessors: {
-      '**/*.es6': ['traceur']
-    },
     reporters: ['mocha'],
     singleRun: true
   });

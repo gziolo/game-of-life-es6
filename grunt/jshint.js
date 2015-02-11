@@ -5,13 +5,13 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       files: {
-        src: [ 'src/js/**/*.es6' ]
+        src: [ 'src/js/**/*.js' ]
       }
     },
     spec: {
       options: grunt.util._.merge(grunt.file.readJSON('test/.jshintrc'), grunt.file.readJSON('.jshintrc')),
       files: {
-        src: [ 'test/**/*.es6' ]
+        src: [ 'test/**/*.js' ]
       }
     }
   };
