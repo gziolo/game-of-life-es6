@@ -29,7 +29,7 @@ to change```.
 2. Open-Closed (OCP): ```A system should be open for extension, but closed for
 modification```.
 3. Liskov Substitution (LSP): ```Derived types should be substitutable for their base types```.
-4. Interface Segregation (ISP): ```Interfaces should be small, focused on a specific use case```.
+4. Interface Segregation (ISP): ```Abstractions should not depend upon details. Details should depend upon abstractions```.
 5. Dependency Inversion (DIP): ```Interfaces should be small, focused on a specific use case```. 
 
 The DRY (Don't Repeat Yourself) Principle states:
@@ -66,6 +66,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Practical Workflows for ES6 Modules - video by Guy Bedford](https://www.youtube.com/watch?v=0VUjM-jJf2U)
 - [Practical Workflows for ES6 Modules - article by Guy Bedford](http://guybedford.com/practical-workflows-for-es6-modules)
 - [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
+- [Classes in ECMAScript 6](http://www.2ality.com/2015/02/es6-classes-final.html)
 - [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
 - [Author In ES6, Transpile To ES5 As A Build-step: A Workflow For Grunt](http://addyosmani.com/blog/author-in-es6-transpile-to-es5-as-a-build-step-a-workflow-for-grunt/)
 - [Using Grunt & the ES6 Module Transpiler](http://www.thomasboyt.com/2013/06/21/es6-module-transpiler)
