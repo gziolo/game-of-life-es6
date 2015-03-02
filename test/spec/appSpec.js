@@ -1,5 +1,4 @@
 define(['app'], function(App) {
-
   describe('App', function() {
     var test;
 

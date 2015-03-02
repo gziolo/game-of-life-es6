@@ -1,0 +1,67 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "amd": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "block-scoped-var": 2,
+    "brace-style": [
+      2,
+      "1tbs"
+    ],
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "complexity": [
+      2,
+      10
+    ],
+    "eqeqeq": [
+      2,
+      "smart"
+    ],
+    "max-nested-callbacks": [
+      2,
+      3
+    ],
+    "no-else-return": 2,
+    "no-nested-ternary": 2,
+    "no-reserved-keys": 2,
+    "no-undefined": 2,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "radix": 2,
+    "space-after-keywords": [
+      2,
+      "always",
+      {"checkFunctionKeyword": true}
+    ],
+    "space-before-blocks": [
+      2,
+      "always"
+    ],
+    "space-in-brackets": [
+      2,
+      "never"
+    ],
+    "space-in-parens": [
+      2,
+      "never"
+    ],
+    "spaced-line-comment": [
+      2,
+      "always"
+    ],
+    "strict": 0,
+    "wrap-iife": [
+      2,
+      "outside"
+    ],
+    "vars-on-top": 2
+  }
+}

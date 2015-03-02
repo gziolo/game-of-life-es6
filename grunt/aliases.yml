@@ -1,10 +1,10 @@
 dependencies:
   - 'devUpdate'
 verify:
-  - 'jshint'
+  - 'eslint'
   - 'karma:continuous'
 build:
-  - 'jshint'
+  - 'eslint'
   - 'karma:continuous'
 default:
   - 'build'

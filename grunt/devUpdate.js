@@ -1,5 +1,5 @@
 module.exports = {
-  default: {
+  'default': {
     options: {
       updateType: 'prompt',
       reportUpdated: true,
@@ -9,5 +9,6 @@ module.exports = {
         dependencies: false
       },
       packageJson: null
-    }}
+    }
+  }
 };
