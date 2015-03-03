@@ -1,10 +1,11 @@
 dependencies:
   - 'devUpdate'
-verify:
+spec:
+  - 'clean:js'
   - 'eslint'
+  - 'babel:src'
   - 'karma:continuous'
 build:
-  - 'eslint'
-  - 'karma:continuous'
+  - 'spec'
 default:
   - 'build'

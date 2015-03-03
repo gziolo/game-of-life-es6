@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "block-scoped-var": 0,
+    "no-unused-vars": 0,
+    "vars-on-top": 0
+  }
+}

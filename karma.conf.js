@@ -10,7 +10,7 @@ module.exports = function (config) {
     },
     colors: true,
     files: [
-      {pattern: 'src/js/**/*.js', included: false},
+      {pattern: 'dist/js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
 
       'test/test-main.js'

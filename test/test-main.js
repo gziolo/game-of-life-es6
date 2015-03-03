@@ -1,7 +1,7 @@
 /*eslint "no-underscore-dangle": 0 */
 (function(window, require) {
   require.config({
-    baseUrl: '/base/src/js',
+    baseUrl: '/base/dist/js',
     callback: window.__karma__.start,
     deps: (function() {
       var tests = [];
