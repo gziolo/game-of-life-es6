@@ -16,6 +16,7 @@ module.exports = function(config) {
     },
     colors: true,
     files: [
+      {pattern: 'bower_components/**/*.js', included: false},
       {pattern: 'src/js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
 

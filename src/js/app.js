@@ -1,4 +1,4 @@
-import $ from '../../bower_components/jquery/dist/jquery';
+import $ from 'jquery';
 import Bootstrap from 'bootstrap';
 
 $(function() {

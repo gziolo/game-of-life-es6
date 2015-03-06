@@ -1,3 +1,3 @@
 module.exports = {
-  js: ['dist/js']
+  dist: ['dist']
 };

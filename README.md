@@ -40,7 +40,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 
 ## Requirements ##
 
-- Node 0.10.x.
+- Node 0.12.x or io.js 1.x
 - grunt-cli: run npm install -g grunt-cli if needed.
 - Windows only: remember to set Git and Node path in environment variable %PATH%.
 
@@ -70,7 +70,8 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
 - [Author In ES6, Transpile To ES5 As A Build-step: A Workflow For Grunt](http://addyosmani.com/blog/author-in-es6-transpile-to-es5-as-a-build-step-a-workflow-for-grunt/)
 - [Using Grunt & the ES6 Module Transpiler](http://www.thomasboyt.com/2013/06/21/es6-module-transpiler)
-- [ES6 modules today with 6TO5](http://es6rocks.com/2014/10/es6-modules-today-with-6to5/)
+- [ES6 modules today with Babel (6TO5)](http://es6rocks.com/2014/10/es6-modules-today-with-6to5/)
+- [Lint Like It’s 2015 (babel-eslint)](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48)
 
 ### Grunt build tasks ###
 - [Grunt](http://gruntjs.com/)
