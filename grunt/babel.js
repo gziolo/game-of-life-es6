@@ -9,6 +9,12 @@ module.exports = {
       cwd: 'src/js/',
       src: ['**/*.js'],
       dest: 'dist/js/'
-    }]
+    },
+      {
+        expand: true,
+        cwd: 'test/spec/',
+        src: ['**/*.js'],
+        dest: 'dist/spec/'
+      }]
   }
 };

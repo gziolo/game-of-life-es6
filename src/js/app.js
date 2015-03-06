@@ -1,4 +1,7 @@
+import $ from '../../bower_components/jquery/dist/jquery';
 import Bootstrap from 'bootstrap';
 
-var bootstrap = new Bootstrap();
-bootstrap.init();
+$(function() {
+  var bootstrap = new Bootstrap();
+  bootstrap.init();
+});
