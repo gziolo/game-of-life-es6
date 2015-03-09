@@ -5,6 +5,12 @@ describe('Coordinate', function() {
     this.coordinate = new Coordinate(3, 3);
   });
 
+  it('should throw exception when invalid coordinates provided', () => {
+    should.throw(() => {
+      let coordinate = new Coordinate(0, 0);
+    }, Error, 'Invalid coordinates provided: x=0 y=0.');
+  });
+
   it('should have not [x,y] coordinates equal to [2,1]', () => {
     (this.coordinate.equals(new Coordinate(2, 1))).should.be.false;
   });

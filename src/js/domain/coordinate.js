@@ -1,6 +1,9 @@
 export default
 class Coordinate {
   constructor(x, y) {
+    if (x < 1 || y < 1) {
+      throw new Error(`Invalid coordinates provided: x=${x} y=${y}.`);
+    }
     this.x = x;
     this.y = y;
     this.neighbors = [];
