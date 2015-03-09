@@ -15,4 +15,11 @@ describe('World', function() {
 
     (this.world.isEmpty()).should.be.false;
   });
+
+  it('should create coordinates when create called', () => {
+    this.world.create(1, 1);
+
+    (this.world.isEmpty()).should.be.false;
+  });
+
 });
