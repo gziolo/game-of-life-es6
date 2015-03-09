@@ -6,6 +6,14 @@ class Coordinate {
     this.neighbors = [];
   }
 
+  getX() {
+    return this.x;
+  }
+
+  getY() {
+    return this.y;
+  }
+
   addNeighbor(coordinate) {
     this.neighbors.push(coordinate);
   }

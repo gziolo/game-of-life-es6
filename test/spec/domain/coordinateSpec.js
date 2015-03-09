@@ -5,6 +5,11 @@ describe('Coordinate', function() {
     this.coordinate = new Coordinate(1, 1);
   });
 
+  it('should have [x,y] coordinates equal to [1,1]', () => {
+    (this.coordinate.getX()).should.be.equal(1);
+    (this.coordinate.getY()).should.be.equal(1);
+  });
+
   it('should have 0 neighbors', () => {
     (this.coordinate.neighborsCount()).should.be.equal(0);
   });
