@@ -7,19 +7,18 @@ describe('World', function() {
   });
 
   it('should be empty', () => {
-    (this.world.isEmpty()).should.be.true;
+    (this.world.coordinatesCount()).should.equals(0);
   });
 
   it('should not be empty when coordinate added', () => {
     this.world.addCoordinate(new Coordinate(1, 1));
 
-    (this.world.isEmpty()).should.be.false;
+    (this.world.coordinatesCount()).should.equals(1);
   });
 
   it('should create coordinates when create called', () => {
-    this.world.create(1, 1);
+    this.world.create(4, 2);
 
-    (this.world.isEmpty()).should.be.false;
+    (this.world.coordinatesCount()).should.equals(8);
   });
-
 });

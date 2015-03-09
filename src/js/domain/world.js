@@ -19,7 +19,7 @@ class World {
     this.coordinates.push(coordinate);
   }
 
-  isEmpty() {
-    return (this.coordinates.length === 0);
+  coordinatesCount() {
+    return this.coordinates.length;
   }
 }
