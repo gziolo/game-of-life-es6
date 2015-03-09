@@ -14,6 +14,14 @@ class Coordinate {
     return this.x === otherX && this.y === otherY;
   }
 
+  isNeighbor(otherCoordinate) {
+    if (this.equals(otherCoordinate)) {
+      return false;
+    }
+
+    return true;
+  }
+
   addNeighbor(coordinate) {
     this.neighbors.push(coordinate);
   }

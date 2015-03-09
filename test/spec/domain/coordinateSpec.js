@@ -13,6 +13,16 @@ describe('Coordinate', function() {
     (this.coordinate.equals(new Coordinate(1, 1))).should.be.true;
   });
 
+  it('should not have neighbor with identical [x,y]', () => {
+    (this.coordinate.isNeighbor(new Coordinate(1, 1))).should.be.false;
+  });
+
+  it('should have neighbor with adjacent [x,y]', () => {
+    (this.coordinate.isNeighbor(new Coordinate(1, 2))).should.be.true;
+    (this.coordinate.isNeighbor(new Coordinate(2, 1))).should.be.true;
+    (this.coordinate.isNeighbor(new Coordinate(2, 2))).should.be.true;
+  });
+
   it('should have 0 neighbors', () => {
     (this.coordinate.neighborsCount()).should.be.equal(0);
   });
