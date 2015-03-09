@@ -8,6 +8,7 @@ class World {
 
   create(x = 0, y = 0) {
     this.createCoordinates(x, y);
+    this.addNeighborsToCoordinates();
   }
 
   createCoordinates(x, y) {
@@ -21,6 +22,16 @@ class World {
 
   addCoordinate(coordinate) {
     this.coordinates.push(coordinate);
+  }
+
+  addNeighborsToCoordinates() {
+    this.coordinates.forEach((coordinate) => {
+      this.coordinates.forEach((otherCoordinate) => {
+        if (coordinate.isNeighbor(otherCoordinate)) {
+          coordinate.addNeighbor(otherCoordinate);
+        }
+      });
+    });
   }
 
   getCoordinateAt(x, y) {

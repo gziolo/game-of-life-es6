@@ -36,18 +36,19 @@ describe('Coordinate', function() {
 
   it('should not recognize coordinate with not adjacent [x,y] as neighbor', () => {
     (this.coordinate.isNeighbor(new Coordinate(1, 1))).should.be.false;
-    (this.coordinate.isNeighbor(new Coordinate(5, 5))).should.be.false;
+    (this.coordinate.isNeighbor(new Coordinate(3, 5))).should.be.false;
+    (this.coordinate.isNeighbor(new Coordinate(5, 3))).should.be.false;
     (this.coordinate.isNeighbor(new Coordinate(9, 11))).should.be.false;
   });
 
   it('should have 0 neighbors', () => {
-    (this.coordinate.neighborsCount()).should.be.equal(0);
+    (this.coordinate.getNeighborsCount()).should.be.equal(0);
   });
 
   it('should have 2 neighbors when 2 neighbors added', () => {
     this.coordinate.addNeighbor(new Coordinate(2, 2));
     this.coordinate.addNeighbor(new Coordinate(4, 4));
 
-    (this.coordinate.neighborsCount()).should.be.equal(2);
+    (this.coordinate.getNeighborsCount()).should.be.equal(2);
   });
 });

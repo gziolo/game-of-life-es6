@@ -32,4 +32,14 @@ describe('World', function() {
 
     (this.world.getCoordinateAt(6, 9)).should.eql(coordinate);
   });
+
+  it('should add neighbors to all coordinates', () => {
+    this.world.create(3, 3);
+
+    (this.world.getCoordinateAt(1, 1).getNeighborsCount()).should.be.equal(3);
+    (this.world.getCoordinateAt(1, 2).getNeighborsCount()).should.be.equal(5);
+    (this.world.getCoordinateAt(2, 2).getNeighborsCount()).should.be.equal(8);
+    (this.world.getCoordinateAt(2, 3).getNeighborsCount()).should.be.equal(5);
+    (this.world.getCoordinateAt(3, 3).getNeighborsCount()).should.be.equal(3);
+  });
 });

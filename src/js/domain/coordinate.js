@@ -30,7 +30,7 @@ class Coordinate {
       return false;
     }
 
-    if (Math.abs(otherY - this.x) > 1) {
+    if (Math.abs(otherY - this.y) > 1) {
       return false;
     }
 
@@ -41,7 +41,7 @@ class Coordinate {
     this.neighbors.push(coordinate);
   }
 
-  neighborsCount() {
+  getNeighborsCount() {
     return this.neighbors.length;
   }
 }
