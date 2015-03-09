@@ -1,6 +1,6 @@
 export default
 class LiveCell {
-  staysAlive(numberOfNeighbors) {
-    return numberOfNeighbors === 2 || numberOfNeighbors === 3;
+  staysAlive(numberOfLiveNeighbors) {
+    return numberOfLiveNeighbors === 2 || numberOfLiveNeighbors === 3;
   }
 }
