@@ -1,5 +1,7 @@
+import AbstractCell from './abstractCell';
+
 export default
-class LiveCell {
+class LiveCell extends AbstractCell {
   changesState() {
     return !this.staysAlive();
   }
