@@ -16,8 +16,4 @@ export default class Cell {
 
     return Cell.createDead();
   }
-
-  static isAlive(cell) {
-    return cell instanceof LiveCell;
-  }
 }

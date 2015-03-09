@@ -52,6 +52,6 @@ class Coordinate {
   }
 
   hasLiveCell() {
-    return Cell.isAlive(this.cell);
+    return this.cell.isAlive();
   }
 }

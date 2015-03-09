@@ -1,4 +1,5 @@
 import Coordinate from 'domain/coordinate';
+import Cell from 'domain/cell/cell';
 
 describe('Coordinate', function() {
   beforeEach(() => {
@@ -50,5 +51,17 @@ describe('Coordinate', function() {
     this.coordinate.addNeighbor(new Coordinate(4, 4));
 
     (this.coordinate.getNeighborsCount()).should.be.equal(2);
+  });
+
+  it('should have live cell when live cell injected', () => {
+    var coordinate = new Coordinate(1, 1, Cell.createLive());
+
+    coordinate.hasLiveCell().should.be.true;
+  });
+
+  it('should have no live cell when dead cell injected', () => {
+    var coordinate = new Coordinate(1, 1, Cell.createDead());
+
+    coordinate.hasLiveCell().should.be.false;
   });
 });

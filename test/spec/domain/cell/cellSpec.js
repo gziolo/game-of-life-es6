@@ -1,4 +1,5 @@
 import Cell from 'domain/cell/cell';
+import AbstractCell from 'domain/cell/abstractCell';
 import LiveCell from 'domain/cell/liveCell';
 import DeadCell from 'domain/cell/deadCell';
 
@@ -11,11 +12,7 @@ describe('cell', function() {
     Cell.createDead().should.be.an.instanceof(DeadCell);
   });
 
-  it('should see dead cell as not alive', () => {
-    Cell.isAlive(Cell.createDead()).should.be.false;
-  });
-
-  it('should see live cell as alive', () => {
-    Cell.isAlive(Cell.createLive()).should.be.true;
+  it('should create cell that has instance of AbstractCell', () => {
+    Cell.createRandom().should.be.an.instanceof(AbstractCell);
   });
 });
