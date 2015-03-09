@@ -15,7 +15,19 @@ class Coordinate {
   }
 
   isNeighbor(otherCoordinate) {
-    if (this.equals(otherCoordinate)) {
+    return otherCoordinate.isNeighborCoordinate(this.x, this.y);
+  }
+
+  isNeighborCoordinate(otherX, otherY) {
+    if (this.equalsCoordinate(otherX, otherY)) {
+      return false;
+    }
+
+    if (Math.abs(otherX - this.x) > 1) {
+      return false;
+    }
+
+    if (Math.abs(otherY - this.x) > 1) {
       return false;
     }
 
