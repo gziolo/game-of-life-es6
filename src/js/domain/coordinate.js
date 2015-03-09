@@ -1,11 +1,17 @@
+import Cell from './cell/cell';
+
 export default
 class Coordinate {
-  constructor(x, y) {
+  constructor(x, y, cell = null) {
     if (x < 1 || y < 1) {
       throw new Error(`Invalid coordinates provided: x=${x} y=${y}.`);
     }
     this.x = x;
     this.y = y;
+    if (cell === null) {
+      cell = Cell.createRandom();
+    }
+    this.cell = cell;
     this.neighbors = [];
   }
 
@@ -43,5 +49,9 @@ class Coordinate {
 
   getNeighborsCount() {
     return this.neighbors.length;
+  }
+
+  hasLiveCell() {
+    return Cell.isAlive(this.cell);
   }
 }

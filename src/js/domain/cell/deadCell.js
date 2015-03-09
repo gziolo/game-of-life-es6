@@ -4,4 +4,3 @@ class DeadCell {
     return numberOfLiveNeighbors === 3;
   }
 }
-
