@@ -6,14 +6,6 @@ class Coordinate {
     this.neighbors = [];
   }
 
-  getX() {
-    return this.x;
-  }
-
-  getY() {
-    return this.y;
-  }
-
   equals(otherCoordinate) {
     return otherCoordinate.equalsCoordinate(this.x, this.y);
   }

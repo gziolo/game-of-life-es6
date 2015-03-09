@@ -12,7 +12,6 @@ class World {
 
   createCoordinates(x, y) {
     this.coordinates = [];
-    this.length = 0;
     for (let i = 1; i <= x; i++) {
       for (let j = 1; j <= y; j++) {
         this.addCoordinate(new Coordinate(i, j));
@@ -21,16 +20,22 @@ class World {
   }
 
   addCoordinate(coordinate) {
-    this.coordinates[coordinate.getX()] = this.coordinates[coordinate.getX()] || [];
-    this.coordinates[coordinate.getX()][coordinate.getY()] = coordinate;
-    this.length += 1;
+    this.coordinates.push(coordinate);
   }
 
   getCoordinateAt(x, y) {
-    return this.coordinates[x] && this.coordinates[x][y];
+    var expectedCoordinate = new Coordinate(x, y);
+
+    for (let i = 0, length = this.coordinatesCount(); i < length; i++) {
+      if (this.coordinates[i].equals(expectedCoordinate)) {
+        return this.coordinates[i];
+      }
+    }
+
+    return null;
   }
 
   coordinatesCount() {
-    return this.length;
+    return this.coordinates.length;
   }
 }
