@@ -56,6 +56,14 @@ class Coordinate {
   }
 
   changesState() {
-    return true;
+    var numberOfLiveNeighbors = 0;
+
+    this.neighbors.forEach(coordinate => {
+      if (coordinate.hasLiveCell()) {
+        numberOfLiveNeighbors += 1;
+      }
+    });
+
+    return this.cell.changesState(numberOfLiveNeighbors);
   }
 }

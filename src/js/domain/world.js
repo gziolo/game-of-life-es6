@@ -25,8 +25,8 @@ class World {
   }
 
   addNeighborsToCoordinates() {
-    this.coordinates.forEach((coordinate) => {
-      this.coordinates.forEach((otherCoordinate) => {
+    this.coordinates.forEach(coordinate => {
+      this.coordinates.forEach(otherCoordinate => {
         if (coordinate.isNeighbor(otherCoordinate)) {
           coordinate.addNeighbor(otherCoordinate);
         }
@@ -34,10 +34,20 @@ class World {
     });
   }
 
-  getCoordinateAt(x, y) {
-    var expectedCoordinate = new Coordinate(x, y);
+  tick() {
+    var callbacks = [];
 
-    for (let i = 0, length = this.coordinatesCount(); i < length; i++) {
+    this.coordinates.forEach(coordinate => {
+      if (coordinate.changesState()) {
+        callbacks.push(function() {
+          coordinate.nextGeneration();
+        });
+      }
+    });
+  }
+
+  getCoordinateAt(x, y) {
+    for (let i = 0, length = this.coordinatesCount(), expectedCoordinate = new Coordinate(x, y); i < length; i++) {
       if (this.coordinates[i].equals(expectedCoordinate)) {
         return this.coordinates[i];
       }
