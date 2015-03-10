@@ -15,13 +15,9 @@ class World {
     this.coordinates = [];
     for (let i = 1; i <= x; i++) {
       for (let j = 1; j <= y; j++) {
-        this.addCoordinate(new Coordinate(i, j));
+        this.coordinates.push(new Coordinate(i, j));
       }
     }
-  }
-
-  addCoordinate(coordinate) {
-    this.coordinates.push(coordinate);
   }
 
   addNeighborsToCoordinates() {
@@ -40,9 +36,13 @@ class World {
     this.coordinates.forEach(coordinate => {
       if (coordinate.changesState()) {
         callbacks.push(function() {
-          coordinate.nextGeneration();
+          coordinate.nextState();
         });
       }
+    });
+
+    callbacks.forEach(callback => {
+      callback();
     });
   }
 
