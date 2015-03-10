@@ -70,6 +70,8 @@ class Coordinate {
   nextState() {
     if (this.hasLiveCell()) {
       this.cell = Cell.createDead();
+    } else {
+      this.cell = Cell.createLive();
     }
   }
 }
