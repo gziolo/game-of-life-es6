@@ -103,4 +103,12 @@ describe('Coordinate', function() {
 
     liveCoordinate.changesState().should.be.false;
   });
+
+  it('should change state from live to dead when next state is requested', () => {
+    var liveCoordinate = new Coordinate(1, 1, Cell.createLive());
+
+    liveCoordinate.hasLiveCell().should.be.true;
+    liveCoordinate.nextState();
+    liveCoordinate.hasLiveCell().should.be.false;
+  });
 });

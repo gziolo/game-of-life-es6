@@ -66,4 +66,10 @@ class Coordinate {
 
     return this.cell.changesState(numberOfLiveNeighbors);
   }
+
+  nextState() {
+    if (this.hasLiveCell()) {
+      this.cell = Cell.createDead();
+    }
+  }
 }
