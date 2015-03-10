@@ -90,4 +90,17 @@ describe('Coordinate', function() {
 
     deadCoordinate.changesState().should.be.false;
   });
+
+  it('should not change state from live to dead when it has 2 live neighbors', () => {
+    var liveCoordinate = new Coordinate(1, 1, Cell.createLive()),
+      liveCoordinate12 = new Coordinate(1, 2, Cell.createLive()),
+      liveCoordinate21 = new Coordinate(2, 1, Cell.createLive()),
+      deadCoordinate22 = new Coordinate(2, 2, Cell.createDead());
+
+    liveCoordinate.addNeighbor(liveCoordinate12);
+    liveCoordinate.addNeighbor(liveCoordinate21);
+    liveCoordinate.addNeighbor(deadCoordinate22);
+
+    liveCoordinate.changesState().should.be.false;
+  });
 });
