@@ -1,6 +1,6 @@
 export default
 class AbstractCell {
-  changesState() {
+  changesState(numberOfLiveNeighbors) {
   }
 
   isAlive() {

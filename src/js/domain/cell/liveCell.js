@@ -2,8 +2,8 @@ import AbstractCell from './abstractCell';
 
 export default
 class LiveCell extends AbstractCell {
-  changesState() {
-    return !this.staysAlive();
+  changesState(numberOfLiveNeighbors) {
+    return !this.staysAlive(numberOfLiveNeighbors);
   }
 
   isAlive() {

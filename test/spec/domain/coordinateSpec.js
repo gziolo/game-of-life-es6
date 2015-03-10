@@ -64,4 +64,17 @@ describe('Coordinate', function() {
 
     coordinate.hasLiveCell().should.be.false;
   });
+
+  it('should change state from dead to live when has 3 live neighbors', () => {
+    var deadCoordinate = new Coordinate(1, 1, Cell.createDead()),
+      liveCoordinate12 = new Coordinate(1, 2, Cell.createLive()),
+      liveCoordinate21 = new Coordinate(2, 1, Cell.createLive()),
+      liveCoordinate22 = new Coordinate(2, 2, Cell.createLive());
+
+    deadCoordinate.addNeighbor(liveCoordinate12);
+    deadCoordinate.addNeighbor(liveCoordinate21);
+    deadCoordinate.addNeighbor(liveCoordinate22);
+
+    deadCoordinate.changesState().should.be.true;
+  });
 });
