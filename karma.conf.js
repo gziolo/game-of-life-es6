@@ -20,6 +20,7 @@ module.exports = function(config) {
       {pattern: 'src/js/**/*.js', included: false},
       {pattern: 'test/**/*Spec.js', included: false},
 
+      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
       'test/test-main.js'
     ],
     frameworks: ['mocha', 'requirejs', 'sinon-chai'],
