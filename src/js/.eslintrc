@@ -1,6 +1,5 @@
 {
   "rules": {
-    "block-scoped-var": 0,
-    "no-unused-vars": 0
+    "block-scoped-var": 0
   }
 }

@@ -1,9 +1,12 @@
 {
-  "parser": "babel-eslint",
   "env": {
     "amd": true,
     "browser": true,
+    "es6": true,
     "node": true
+  },
+  "ecmaFeatures": {
+    "modules": true
   },
   "rules": {
     "block-scoped-var": 2,
