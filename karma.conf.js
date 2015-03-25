@@ -1,13 +1,12 @@
 module.exports = function(config) {
   config.set({
     autoWatch: false,
-    babelPreprocessor: {
-      options: {
-        modules: 'amd',
-        sourceMap: 'inline'
-      }
-    },
+    basePath: '',
     browsers: ['Firefox'],
+    browserify: {
+      debug: true,
+      transform: ['babelify']
+    },
     captureTimeout: 60000,
     client: {
       mocha: {
@@ -16,19 +15,15 @@ module.exports = function(config) {
     },
     colors: true,
     files: [
-      {pattern: 'bower_components/**/*.js', included: false},
-      {pattern: 'src/js/**/*.js', included: false},
-      {pattern: 'test/**/*Spec.js', included: false},
-
-      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
-      'test/test-main.js'
+      'src/js/**/*.js',
+      'test/**/*Spec.js'
     ],
-    frameworks: ['mocha', 'requirejs', 'sinon-chai'],
+    frameworks: ['browserify', 'mocha', 'sinon-chai'],
     logLevel: config.LOG_INFO,
     port: 9877,
     preprocessors: {
-      'src/**/*.js': ['babel'],
-      'test/**/*Spec.js': ['babel']
+      'src/**/*.js': ['browserify'],
+      'test/**/*Spec.js': ['browserify']
     },
     reporters: ['mocha'],
     singleRun: true

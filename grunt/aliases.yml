@@ -6,7 +6,7 @@ spec:
 build:
   - 'spec'
   - 'clean'
-  - 'babel:js'
+  - 'browserify:js'
   - 'copy:assets'
 default:
   - 'build'

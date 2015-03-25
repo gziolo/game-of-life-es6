@@ -2,8 +2,8 @@ import Coordinate from './coordinate';
 
 export default
 class World {
-  constructor() {
-    this.create();
+  constructor(x = 0, y = 0) {
+    this.create(x, y);
   }
 
   create(x = 0, y = 0) {

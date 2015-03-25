@@ -1,5 +1,5 @@
-import World from 'domain/world';
-import Coordinate from 'domain/coordinate';
+import World from '../../../src/js/domain/world';
+import Coordinate from '../../../src/js/domain/coordinate';
 
 describe('World', function() {
   beforeEach(() => {
