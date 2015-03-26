@@ -2,7 +2,7 @@
   "name": "game-of-life-es6",
   "title": "Game of Life ES6",
   "description": "Conway's Game of life - ES6 JavaScript algorithm implementation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "gziolo",
   "main": "./dist/bundle.js",
   "directories": {
@@ -48,5 +48,9 @@
   "scripts": {
     "test": "grunt build"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "dist",
+    "example"
+  ]
 }
