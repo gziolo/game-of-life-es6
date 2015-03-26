@@ -1,23 +1,23 @@
 {
-  "name": "game-of-life",
+  "name": "game-of-life-es6",
   "title": "Game of Life ES6",
-  "description": "Conway's Game of life - ES6 JavaScript implementation",
+  "description": "Conway's Game of life - ES6 JavaScript algorithm implementation",
   "version": "0.1.0",
-  "main": "dist/bundle.js",
-  "homepage": "https://github.com/gziolo/game-of-life.git",
+  "author": "gziolo",
+  "main": "./dist/bundle.js",
+  "directories": {
+    "example": "./example",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "homepage": "http://gziolo.github.io/game-of-life-es6/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:gziolo/game-of-life.git"
+    "url": "git@github.com:gziolo/game-of-life-es6.git"
   },
   "bugs": {
-    "url": "https://github.com/gziolo/game-of-life/issues"
+    "url": "https://github.com/gziolo/game-of-life-es6/issues"
   },
-  "licenses": [
-    {
-      "type": "Game of Life license",
-      "url": "https://github.com/gziolo/game-of-life/blob/master/LICENSE"
-    }
-  ],
   "keywords": [
     "game-of-life",
     "es6"
@@ -47,5 +47,6 @@
   },
   "scripts": {
     "test": "grunt build"
-  }
+  },
+  "license": "MIT"
 }

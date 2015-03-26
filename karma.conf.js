@@ -15,14 +15,14 @@ module.exports = function(config) {
     },
     colors: true,
     files: [
-      'src/**/*.js',
+      'lib/**/*.js',
       'test/**/*Spec.js'
     ],
     frameworks: ['browserify', 'mocha', 'sinon-chai'],
     logLevel: config.LOG_INFO,
     port: 9877,
     preprocessors: {
-      'src/**/*.js': ['browserify'],
+      'lib/**/*.js': ['browserify'],
       'test/**/*Spec.js': ['browserify']
     },
     reporters: ['mocha'],

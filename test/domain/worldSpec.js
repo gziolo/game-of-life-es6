@@ -1,5 +1,5 @@
-import World from 'src/domain/world';
-import Coordinate from 'src/domain/coordinate';
+import World from 'lib/domain/world';
+import Coordinate from 'lib/domain/coordinate';
 
 describe('World', function() {
   beforeEach(() => {

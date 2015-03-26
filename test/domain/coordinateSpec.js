@@ -1,5 +1,5 @@
-import Coordinate from 'src/domain/coordinate';
-import Cell from 'src/domain/cell/cell';
+import Coordinate from 'lib/domain/coordinate';
+import Cell from 'lib/domain/cell/cell';
 
 describe('Coordinate', function() {
   beforeEach(() => {

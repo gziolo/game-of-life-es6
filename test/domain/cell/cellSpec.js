@@ -1,7 +1,7 @@
-import Cell from 'src/domain/cell/cell';
-import AbstractCell from 'src/domain/cell/abstractCell';
-import LiveCell from 'src/domain/cell/liveCell';
-import DeadCell from 'src/domain/cell/deadCell';
+import Cell from 'lib/domain/cell/cell';
+import AbstractCell from 'lib/domain/cell/abstractCell';
+import LiveCell from 'lib/domain/cell/liveCell';
+import DeadCell from 'lib/domain/cell/deadCell';
 
 describe('cell', function() {
   it('should create live cell', () => {

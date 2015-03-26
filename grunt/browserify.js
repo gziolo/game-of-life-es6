@@ -11,7 +11,7 @@ module.exports = {
   },
   js: {
     files: {
-      'dist/bundle.js': ['src/**/*.js']
+      'dist/bundle.js': ['lib/**/*.js']
     },
     options: {
       browserifyOptions: {

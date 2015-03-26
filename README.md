@@ -1,6 +1,6 @@
-Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life.png?branch=master)](https://travis-ci.org/gziolo/game-of-life)
+Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life-es6.png?branch=master)](https://travis-ci.org/gziolo/game-of-life-es6)
 ============
-ES6 JavaScript implementation.
+ES6 JavaScript algorithm implementation.
 
 ## Rules ##
 

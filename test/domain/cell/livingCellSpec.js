@@ -1,4 +1,4 @@
-import LiveCell from 'src/domain/cell/liveCell';
+import LiveCell from 'lib/domain/cell/liveCell';
 
 describe('Live cell', function() {
   beforeEach(() => {

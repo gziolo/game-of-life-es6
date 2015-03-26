@@ -1,4 +1,4 @@
-import DeadCell from 'src/domain/cell/deadCell';
+import DeadCell from 'lib/domain/cell/deadCell';
 
 describe('Dead cell', function() {
   beforeEach(() => {
