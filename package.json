@@ -2,7 +2,8 @@
   "name": "game-of-life",
   "title": "Game of Life ES6",
   "description": "Conway's Game of life - ES6 JavaScript implementation",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "main": "dist/bundle.js",
   "homepage": "https://github.com/gziolo/game-of-life.git",
   "repository": {
     "type": "git",

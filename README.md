@@ -38,20 +38,27 @@ The DRY (Don't Repeat Yourself) Principle states:
 Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
 ```
 
-## Requirements ##
+## Requirements
 
 - Node 0.12.x or io.js 1.x
 - grunt-cli: run npm install -g grunt-cli if needed.
 - Windows only: remember to set Git and Node path in environment variable %PATH%.
 
-## Useful Links ##
+## Grunt tasks
 
-### General ###
+- `grunt dependencies` - helps to update package.json file
+- `grunt spec` - lints the code and runs unit tests 
+- `grunt build` - lints the code, runs unit tests, creates `dist/bundle.js` transformed ES5 code
+- `grunt` - runs `grunt build`
+
+## Useful Links
+
+### General
 - [Game of Life (Wikipedia)](http://en.wikipedia.org/wiki/Conway's_Game_of_Life)
 - [Coderetreat](http://coderetreat.org/)
 - [Legacy Code Retreat - Rescuing legacy code without fear](http://legacycoderetreat.typepad.com/)
 
-### Design ###
+### Design
 - [Principles of Object Oriented Design](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 - [Is Design Dead? - article by Martin Fowler](http://martinfowler.com/articles/designDead.html)
 - [Don't Repeat Yourself](http://c2.com/cgi/wiki?DontRepeatYourself)
@@ -59,7 +66,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Understanding the Four Rules of Simple Design - book by Corey Haines](https://leanpub.com/4rulesofsimpledesign)
 - [The Four Elements of Simple Design](http://www.jbrains.ca/permalink/the-four-elements-of-simple-design)
 
-### ES6 ###
+### ES6
 - [Traceur](https://github.com/google/traceur-compiler)
 - [An ES6 Module Loader polyfill](https://github.com/ModuleLoader/es6-module-loader)
 - [Traceur-TodoMVC – a Backbone.js app written with ES6](http://addyosmani.com/blog/traceur-todomvc/)
@@ -73,9 +80,9 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [ES6 modules today with Babel (6TO5)](http://es6rocks.com/2014/10/es6-modules-today-with-6to5/)
 - [Lint Like It’s 2015 (babel-eslint)](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48)
 
-### Grunt build tasks ###
+### Grunt tasks
 - [Grunt](http://gruntjs.com/)
-- [JSHint](http://www.jshint.com/docs/)
+- [ESLint](http://eslint.org/)
 - [Karma](http://karma-runner.github.io/)
 - [Mocha](http://visionmedia.github.io/mocha/)
 - [ChaiJS online test suite](http://chaijs.com/api/test/)
@@ -83,10 +90,3 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Grunt basics](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
 - [How to squeeze the most out of your build configuration](http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/)
 - [Testing Asynchronous JavaScript](http://martinfowler.com/articles/asyncJS.html)
-- [Using r.js to Optimize Your RequireJS Project](http://tech.pro/blog/1639/using-rjs-to-optimize-your-requirejs-project)
-
-### Libraries ###
-- [RequireJS](http://requirejs.org/)
-- [Backbone.js](http://backbonejs.org/)
-- [Lo-Dash](http://lodash.com/docs)
-- [jQuery](http://jquery.com/)
