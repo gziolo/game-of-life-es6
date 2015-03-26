@@ -7,6 +7,5 @@ build:
   - 'spec'
   - 'clean'
   - 'browserify:js'
-  - 'copy:assets'
 default:
   - 'build'

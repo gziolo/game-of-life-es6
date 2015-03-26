@@ -6,12 +6,17 @@ module.exports = {
   },
   test: {
     files: {
-      'dist/test/bundle.js': ['test/spec/**/*.js']
+      'dist/test-bundle.js': ['test/**/*.js']
     }
   },
   js: {
     files: {
-      'dist/js/bundle.js': ['src/js/**/*.js']
+      'dist/bundle.js': ['src/**/*.js']
+    },
+    options: {
+      browserifyOptions: {
+        standalone: 'GameOfLife.World'
+      }
     }
   }
 };

@@ -15,7 +15,7 @@ module.exports = function(config) {
     },
     colors: true,
     files: [
-      'src/js/**/*.js',
+      'src/**/*.js',
       'test/**/*Spec.js'
     ],
     frameworks: ['browserify', 'mocha', 'sinon-chai'],

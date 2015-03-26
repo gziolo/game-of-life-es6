@@ -1,3 +1,3 @@
 module.exports = {
-  target: ['src/js/**/*.js', 'test/**/*.js', 'grunt/*.js', 'Gruntfile.js', 'karma.conf.js']
+  target: ['src/**/*.js', 'test/**/*.js', 'grunt/*.js', 'Gruntfile.js', 'karma.conf.js']
 };
