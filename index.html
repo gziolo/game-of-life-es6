@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta name="description" content="Game-of-life : Conway&#39;s Game of life - ES6 JavaScript implementation">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Game-of-life by gziolo</title>
+    <title>Game-of-life</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Game-of-life</h1>
-        <h2>Conway&#39;s Game of life - ES6 JavaScript implementation</h2>
-        <a href="https://github.com/gziolo/game-of-life" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a name="conways-game-of-life-" class="anchor" href="#conways-game-of-life-"><span class="octicon octicon-link"></span></a>Conway's Game of life <a href="https://travis-ci.org/gziolo/game-of-life"><img src="https://travis-ci.org/gziolo/game-of-life.png?branch=master" alt="Build Status"></a>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gziolo/game-of-life-es6">View on GitHub</a>
+
+          <h1 id="project_title">Game-of-life</h1>
+          <h2 id="project_tagline">Conway&#39;s Game of life - ES6 JavaScript implementation</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gziolo/game-of-life-es6/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gziolo/game-of-life-es6/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="conways-game-of-life-" class="anchor" href="#conways-game-of-life-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conway's Game of life <a href="https://travis-ci.org/gziolo/game-of-life"><img src="https://travis-ci.org/gziolo/game-of-life.png?branch=master" alt="Build Status"></a>
 </h1>
 
 <p>ES6 JavaScript implementation.</p>
 
 <h2>
-<a name="rules" class="anchor" href="#rules"><span class="octicon octicon-link"></span></a>Rules</h2>
+<a id="rules" class="anchor" href="#rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rules</h2>
 
 <p>The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:</p>
 
@@ -44,10 +47,12 @@
 <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
 <li>Any live cell with more than three live neighbours dies, as if by overcrowding.</li>
 <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
-</ul><p>The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed—births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the preceding one). The rules continue to be applied repeatedly to create further generations.</p>
+</ul>
+
+<p>The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed—births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the preceding one). The rules continue to be applied repeatedly to create further generations.</p>
 
 <h2>
-<a name="good-coding-pratices" class="anchor" href="#good-coding-pratices"><span class="octicon octicon-link"></span></a>Good coding pratices</h2>
+<a id="good-coding-pratices" class="anchor" href="#good-coding-pratices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Good coding pratices</h2>
 
 <p>According to Kent Back four rules for a simple system are in order (most important first):</p>
 
@@ -56,7 +61,9 @@
 <li>Contain no duplicate code</li>
 <li>Express all the ideas the author wants to express</li>
 <li>Minimize classes and methods</li>
-</ol><p>SOLID principles:</p>
+</ol>
+
+<p>SOLID principles:</p>
 
 <ol>
 <li>Single Responsibility (SRP): <code>A class (component) should have one, and only one, reason
@@ -66,30 +73,36 @@ modification</code>.</li>
 <li>Liskov Substitution (LSP): <code>Derived types should be substitutable for their base types</code>.</li>
 <li>Interface Segregation (ISP): <code>Interfaces should be small, focused on a specific use case</code>.</li>
 <li>Dependency Inversion (DIP): <code>Interfaces should be small, focused on a specific use case</code>. </li>
-</ol><p>The DRY (Don't Repeat Yourself) Principle states:</p>
+</ol>
+
+<p>The DRY (Don't Repeat Yourself) Principle states:</p>
 
 <pre><code>Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
 </code></pre>
 
 <h2>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
 <li>Node 0.10.x.</li>
 <li>grunt-cli: run npm install -g grunt-cli if needed.</li>
 <li>Windows only: remember to set Git and Node path in environment variable %PATH%.</li>
-</ul><h2>
-<a name="useful-links" class="anchor" href="#useful-links"><span class="octicon octicon-link"></span></a>Useful Links</h2>
+</ul>
+
+<h2>
+<a id="useful-links" class="anchor" href="#useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Links</h2>
 
 <h3>
-<a name="general" class="anchor" href="#general"><span class="octicon octicon-link"></span></a>General</h3>
+<a id="general" class="anchor" href="#general" aria-hidden="true"><span class="octicon octicon-link"></span></a>General</h3>
 
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Game of Life (Wikipedia)</a></li>
 <li><a href="http://coderetreat.org/">Coderetreat</a></li>
 <li><a href="http://legacycoderetreat.typepad.com/">Legacy Code Retreat - Rescuing legacy code without fear</a></li>
-</ul><h3>
-<a name="design" class="anchor" href="#design"><span class="octicon octicon-link"></span></a>Design</h3>
+</ul>
+
+<h3>
+<a id="design" class="anchor" href="#design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Design</h3>
 
 <ul>
 <li><a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">Principles of Object Oriented Design</a></li>
@@ -98,8 +111,10 @@ modification</code>.</li>
 <li><a href="Xp%20Simplicity%20Rules">XP Simplicty Rules</a></li>
 <li><a href="https://leanpub.com/4rulesofsimpledesign">Understanding the Four Rules of Simple Design - book by Corey Haines</a></li>
 <li><a href="http://www.jbrains.ca/permalink/the-four-elements-of-simple-design">The Four Elements of Simple Design</a></li>
-</ul><h3>
-<a name="es6" class="anchor" href="#es6"><span class="octicon octicon-link"></span></a>ES6</h3>
+</ul>
+
+<h3>
+<a id="es6" class="anchor" href="#es6" aria-hidden="true"><span class="octicon octicon-link"></span></a>ES6</h3>
 
 <ul>
 <li><a href="https://github.com/google/traceur-compiler">Traceur</a></li>
@@ -107,8 +122,10 @@ modification</code>.</li>
 <li><a href="http://addyosmani.com/blog/traceur-todomvc/">Traceur-TodoMVC – a Backbone.js app written with ES6</a></li>
 <li><a href="https://www.youtube.com/watch?v=0VUjM-jJf2U">Practical Workflows for ES6 Modules - video by Guy Bedford</a></li>
 <li><a href="http://guybedford.com/practical-workflows-for-es6-modules">Practical Workflows for ES6 Modules - article by Guy Bedford</a></li>
-</ul><h3>
-<a name="grunt-build-tasks" class="anchor" href="#grunt-build-tasks"><span class="octicon octicon-link"></span></a>Grunt build tasks</h3>
+</ul>
+
+<h3>
+<a id="grunt-build-tasks" class="anchor" href="#grunt-build-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt build tasks</h3>
 
 <ul>
 <li><a href="http://gruntjs.com/">Grunt</a></li>
@@ -121,8 +138,10 @@ modification</code>.</li>
 <li><a href="http://ariya.ofilabs.com/2013/12/code-coverage-of-mocha-tests-using-istanbul-and-karma.html">Code Coverage of Mocha Tests using Istanbul and Karma</a></li>
 <li><a href="http://martinfowler.com/articles/asyncJS.html">Testing Asynchronous JavaScript</a></li>
 <li><a href="http://tech.pro/blog/1639/using-rjs-to-optimize-your-requirejs-project">Using r.js to Optimize Your RequireJS Project</a></li>
-</ul><h3>
-<a name="libraries" class="anchor" href="#libraries"><span class="octicon octicon-link"></span></a>Libraries</h3>
+</ul>
+
+<h3>
+<a id="libraries" class="anchor" href="#libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Libraries</h3>
 
 <ul>
 <li><a href="http://requirejs.org/">RequireJS</a></li>
@@ -130,25 +149,18 @@ modification</code>.</li>
 <li><a href="http://lodash.com/docs">Lo-Dash</a></li>
 <li><a href="http://jquery.com/">jQuery</a></li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/gziolo/game-of-life/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/gziolo/game-of-life/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/gziolo/game-of-life"></a> is maintained by <a href="https://github.com/gziolo">gziolo</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Game-of-life maintained by <a href="https://github.com/gziolo">gziolo</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
