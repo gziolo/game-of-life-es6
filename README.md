@@ -2,6 +2,14 @@ Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life
 ============
 ES6 JavaScript algorithm implementation.
 
+## Installation
+
+You can install *Game of life* using npm:
+
+```
+npm install -g game-of-life-es6
+```
+
 ## Rules ##
 
 The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
@@ -38,13 +46,15 @@ The DRY (Don't Repeat Yourself) Principle states:
 Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
 ```
 
-## Requirements
+## Contributing
+
+### Requirements
 
 - Node 0.12.x or io.js 1.x
 - grunt-cli: run npm install -g grunt-cli if needed.
 - Windows only: remember to set Git and Node path in environment variable %PATH%.
 
-## Grunt tasks
+### Grunt tasks
 
 - `grunt dependencies` - helps to update package.json file
 - `grunt spec` - lints the code and runs unit tests 
