@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Game-of-life : Conway&#39;s Game of life - ES6 JavaScript implementation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <title>Game-of-life</title>
+    <title>Game-of-life by gziolo</title>
   </head>
 
   <body>
+    <header>
+      <div class="inner">
+        <h1>Game-of-life</h1>
+        <h2>Conway&#39;s Game of life - ES6 JavaScript implementation</h2>
+        <a href="https://github.com/gziolo/game-of-life-es6" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/gziolo/game-of-life-es6">View on GitHub</a>
-
-          <h1 id="project_title">Game-of-life</h1>
-          <h2 id="project_tagline">Conway&#39;s Game of life - ES6 JavaScript implementation</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/gziolo/game-of-life-es6/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/gziolo/game-of-life-es6/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="conways-game-of-life-" class="anchor" href="#conways-game-of-life-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conway's Game of life <a href="https://travis-ci.org/gziolo/game-of-life"><img src="https://travis-ci.org/gziolo/game-of-life.png?branch=master" alt="Build Status"></a>
 </h1>
 
@@ -71,7 +68,7 @@ to change</code>.</li>
 <li>Open-Closed (OCP): <code>A system should be open for extension, but closed for
 modification</code>.</li>
 <li>Liskov Substitution (LSP): <code>Derived types should be substitutable for their base types</code>.</li>
-<li>Interface Segregation (ISP): <code>Interfaces should be small, focused on a specific use case</code>.</li>
+<li>Interface Segregation (ISP): <code>Abstractions should not depend upon details. Details should depend upon abstractions</code>.</li>
 <li>Dependency Inversion (DIP): <code>Interfaces should be small, focused on a specific use case</code>. </li>
 </ol>
 
@@ -84,9 +81,24 @@ modification</code>.</li>
 <a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
 <ul>
-<li>Node 0.10.x.</li>
+<li>Node 0.12.x or io.js 1.x</li>
 <li>grunt-cli: run npm install -g grunt-cli if needed.</li>
 <li>Windows only: remember to set Git and Node path in environment variable %PATH%.</li>
+</ul>
+
+<h2>
+<a id="grunt-tasks" class="anchor" href="#grunt-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt tasks</h2>
+
+<ul>
+<li>
+<code>grunt dependencies</code> - helps to update package.json file</li>
+<li>
+<code>grunt spec</code> - lints the code and runs unit tests </li>
+<li>
+<code>grunt build</code> - lints the code, runs unit tests, creates <code>dist/bundle.js</code> transformed ES5 code</li>
+<li>
+<code>grunt</code> - runs <code>grunt build</code>
+</li>
 </ul>
 
 <h2>
@@ -108,7 +120,7 @@ modification</code>.</li>
 <li><a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">Principles of Object Oriented Design</a></li>
 <li><a href="http://martinfowler.com/articles/designDead.html">Is Design Dead? - article by Martin Fowler</a></li>
 <li><a href="http://c2.com/cgi/wiki?DontRepeatYourself">Don't Repeat Yourself</a></li>
-<li><a href="Xp%20Simplicity%20Rules">XP Simplicty Rules</a></li>
+<li><a href="http://c2.com/xp/XpSimplicityRules.html">XP Simplicty Rules</a></li>
 <li><a href="https://leanpub.com/4rulesofsimpledesign">Understanding the Four Rules of Simple Design - book by Corey Haines</a></li>
 <li><a href="http://www.jbrains.ca/permalink/the-four-elements-of-simple-design">The Four Elements of Simple Design</a></li>
 </ul>
@@ -122,45 +134,48 @@ modification</code>.</li>
 <li><a href="http://addyosmani.com/blog/traceur-todomvc/">Traceur-TodoMVC – a Backbone.js app written with ES6</a></li>
 <li><a href="https://www.youtube.com/watch?v=0VUjM-jJf2U">Practical Workflows for ES6 Modules - video by Guy Bedford</a></li>
 <li><a href="http://guybedford.com/practical-workflows-for-es6-modules">Practical Workflows for ES6 Modules - article by Guy Bedford</a></li>
+<li><a href="https://github.com/lukehoban/es6features">Overview of ECMAScript 6 features</a></li>
+<li><a href="http://www.2ality.com/2015/02/es6-classes-final.html">Classes in ECMAScript 6</a></li>
+<li><a href="https://github.com/addyosmani/es6-tools">An aggregation of tooling for ES6</a></li>
+<li><a href="http://addyosmani.com/blog/author-in-es6-transpile-to-es5-as-a-build-step-a-workflow-for-grunt/">Author In ES6, Transpile To ES5 As A Build-step: A Workflow For Grunt</a></li>
+<li><a href="http://www.thomasboyt.com/2013/06/21/es6-module-transpiler">Using Grunt &amp; the ES6 Module Transpiler</a></li>
+<li><a href="http://es6rocks.com/2014/10/es6-modules-today-with-6to5/">ES6 modules today with Babel (6TO5)</a></li>
+<li><a href="https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48">Lint Like It’s 2015 (babel-eslint)</a></li>
 </ul>
 
 <h3>
-<a id="grunt-build-tasks" class="anchor" href="#grunt-build-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt build tasks</h3>
+<a id="grunt-tasks-1" class="anchor" href="#grunt-tasks-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt tasks</h3>
 
 <ul>
 <li><a href="http://gruntjs.com/">Grunt</a></li>
+<li><a href="http://eslint.org/">ESLint</a></li>
 <li><a href="http://karma-runner.github.io/">Karma</a></li>
 <li><a href="http://visionmedia.github.io/mocha/">Mocha</a></li>
 <li><a href="http://chaijs.com/api/test/">ChaiJS online test suite</a></li>
 <li><a href="http://sinonjs.org/docs/">Sinon docs</a></li>
 <li><a href="http://24ways.org/2013/grunt-is-not-weird-and-hard/">Grunt basics</a></li>
 <li><a href="http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/">How to squeeze the most out of your build configuration</a></li>
-<li><a href="http://ariya.ofilabs.com/2013/12/code-coverage-of-mocha-tests-using-istanbul-and-karma.html">Code Coverage of Mocha Tests using Istanbul and Karma</a></li>
 <li><a href="http://martinfowler.com/articles/asyncJS.html">Testing Asynchronous JavaScript</a></li>
-<li><a href="http://tech.pro/blog/1639/using-rjs-to-optimize-your-requirejs-project">Using r.js to Optimize Your RequireJS Project</a></li>
 </ul>
+        </section>
 
-<h3>
-<a id="libraries" class="anchor" href="#libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Libraries</h3>
+        <aside id="sidebar">
+          <a href="https://github.com/gziolo/game-of-life-es6/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/gziolo/game-of-life-es6/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-<ul>
-<li><a href="http://requirejs.org/">RequireJS</a></li>
-<li><a href="http://backbonejs.org/">Backbone.js</a></li>
-<li><a href="http://lodash.com/docs">Lo-Dash</a></li>
-<li><a href="http://jquery.com/">jQuery</a></li>
-</ul>
-      </section>
+          <p class="repo-owner"><a href="https://github.com/gziolo/game-of-life-es6"></a> is maintained by <a href="https://github.com/gziolo">gziolo</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Game-of-life maintained by <a href="https://github.com/gziolo">gziolo</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+  
   </body>
 </html>
