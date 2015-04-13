@@ -43,6 +43,28 @@
 </code></pre>
 
 <h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h4>
+<a id="node" class="anchor" href="#node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node</h4>
+
+<div class="highlight highlight-js"><pre><span class="pl-k">var</span> GameOfLife <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>game-of-life-es6<span class="pl-pds">'</span></span>),
+  world <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">GameOfLife.World</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1</span>);</pre></div>
+
+<h4>
+<a id="browser" class="anchor" href="#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser</h4>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/bundle.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">var</span> world <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">GameOfLife.World</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1</span>);</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
+
+<p>Please check <a href="https://github.com/gziolo/game-of-life-es6/blob/master/lib/README.md">API Documentation</a> for more details.</p>
+
+<h2>
 <a id="rules" class="anchor" href="#rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rules</h2>
 
 <p>The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:</p>
