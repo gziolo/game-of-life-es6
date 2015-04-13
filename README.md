@@ -10,6 +10,28 @@ You can install *Game of life* using npm:
 npm install -g game-of-life-es6
 ```
 
+## Usage
+
+#### Node
+
+```js
+var GameOfLife = require('game-of-life-es6'),
+  world = new GameOfLife.World(1, 1);
+```
+
+#### Browser
+
+```
+<script src="dist/bundle.js"></script>
+<script>
+  var world = new GameOfLife.World(1, 1);
+</script>
+```
+
+## API 
+
+Please check [API Documentation](https://github.com/gziolo/game-of-life-es6/blob/master/lib/README.md) for more details.
+
 ## Rules ##
 
 The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, alive or dead. Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
