@@ -321,29 +321,29 @@ var _Coordinate2 = _interopRequireWildcard(_Coordinate);
 
 var World = (function () {
   function World() {
-    var x = arguments[0] === undefined ? 0 : arguments[0];
-    var y = arguments[1] === undefined ? 0 : arguments[1];
+    var columns = arguments[0] === undefined ? 0 : arguments[0];
+    var rows = arguments[1] === undefined ? 0 : arguments[1];
 
     _classCallCheck(this, World);
 
-    this.create(x, y);
+    this.create(columns, rows);
   }
 
   _createClass(World, [{
     key: 'create',
     value: function create() {
-      var x = arguments[0] === undefined ? 0 : arguments[0];
-      var y = arguments[1] === undefined ? 0 : arguments[1];
+      var columns = arguments[0] === undefined ? 0 : arguments[0];
+      var rows = arguments[1] === undefined ? 0 : arguments[1];
 
-      this.createCoordinates(x, y);
+      this.createCoordinates(columns, rows);
       this.addNeighborsToCoordinates();
     }
   }, {
     key: 'createCoordinates',
-    value: function createCoordinates(x, y) {
+    value: function createCoordinates(columns, rows) {
       this.coordinates = [];
-      for (var i = 1; i <= x; i++) {
-        for (var j = 1; j <= y; j++) {
+      for (var i = 1; i <= columns; i++) {
+        for (var j = 1; j <= rows; j++) {
           this.coordinates.push(new _Coordinate2['default'](i, j));
         }
       }

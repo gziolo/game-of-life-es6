@@ -21,7 +21,7 @@ var GameOfLife = require('game-of-life-es6'),
 
 #### Browser
 
-```
+```html
 <script src="dist/bundle.js"></script>
 <script>
   var world = new GameOfLife.World(1, 1);
