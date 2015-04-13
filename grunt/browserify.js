@@ -15,7 +15,7 @@ module.exports = {
     },
     options: {
       browserifyOptions: {
-        standalone: 'GameOfLife.World'
+        standalone: 'GameOfLife'
       }
     }
   }
