@@ -7,7 +7,6 @@
     "sinon": true
   },
   "rules": {
-    "block-scoped-var": 0,
     "no-unused-expressions": 0
   }
 }
