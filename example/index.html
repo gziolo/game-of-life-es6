@@ -36,7 +36,7 @@
 
   function renderWorld(element, world) {
     var i, j, node, className, child,
-      fragment = new DocumentFragment();
+      fragment = document.createDocumentFragment();
 
     while (child = element.firstChild) {
       element.removeChild(child);
