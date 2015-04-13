@@ -1,89 +1,107 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}(g.GameOfLife || (g.GameOfLife = {})).World = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var AbstractCell = (function () {
   function AbstractCell() {
     _classCallCheck(this, AbstractCell);
   }
 
-  _createClass(AbstractCell, {
-    changesState: {
-      /*eslint no-unused-vars:0 */
+  _createClass(AbstractCell, [{
+    key: "changesState",
 
-      value: function changesState(numberOfLiveNeighbors) {}
-    },
-    isAlive: {
-      value: function isAlive() {}
-    }
-  });
+    /*eslint no-unused-vars:0 */
+    value: function changesState(numberOfLiveNeighbors) {}
+  }, {
+    key: "isAlive",
+    value: function isAlive() {}
+  }]);
 
   return AbstractCell;
 })();
 
-module.exports = AbstractCell;
+exports["default"] = AbstractCell;
+module.exports = exports["default"];
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var LiveCell = _interopRequire(require("./liveCell"));
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var DeadCell = _interopRequire(require("./deadCell"));
+var _LiveCell = require('./liveCell');
+
+var _LiveCell2 = _interopRequireWildcard(_LiveCell);
+
+var _DeadCell = require('./deadCell');
+
+var _DeadCell2 = _interopRequireWildcard(_DeadCell);
 
 var Cell = (function () {
   function Cell() {
     _classCallCheck(this, Cell);
   }
 
-  _createClass(Cell, null, {
-    createLive: {
-      value: function createLive() {
-        return new LiveCell();
-      }
-    },
-    createDead: {
-      value: function createDead() {
-        return new DeadCell();
-      }
-    },
-    createRandom: {
-      value: function createRandom() {
-        /*eslint no-undef:0 */
-        if (Math.random() >= 0.5) {
-          return Cell.createLive();
-        }
-
-        return Cell.createDead();
-      }
+  _createClass(Cell, null, [{
+    key: 'createLive',
+    value: function createLive() {
+      return new _LiveCell2['default']();
     }
-  });
+  }, {
+    key: 'createDead',
+    value: function createDead() {
+      return new _DeadCell2['default']();
+    }
+  }, {
+    key: 'createRandom',
+    value: function createRandom() {
+      /*eslint no-undef:0 */
+      if (Math.random() >= 0.5) {
+        return Cell.createLive();
+      }
+
+      return Cell.createDead();
+    }
+  }]);
 
   return Cell;
 })();
 
-module.exports = Cell;
+exports['default'] = Cell;
+module.exports = exports['default'];
 
 },{"./deadCell":3,"./liveCell":4}],3:[function(require,module,exports){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
 
-var _inherits = function (subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-var AbstractCell = _interopRequire(require("./abstractCell"));
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _AbstractCell2 = require('./abstractCell');
+
+var _AbstractCell3 = _interopRequireWildcard(_AbstractCell2);
 
 var DeadCell = (function (_AbstractCell) {
   function DeadCell() {
@@ -96,41 +114,47 @@ var DeadCell = (function (_AbstractCell) {
 
   _inherits(DeadCell, _AbstractCell);
 
-  _createClass(DeadCell, {
-    changesState: {
-      value: function changesState(numberOfLiveNeighbors) {
-        return this.becomesAlive(numberOfLiveNeighbors);
-      }
-    },
-    isAlive: {
-      value: function isAlive() {
-        return false;
-      }
-    },
-    becomesAlive: {
-      value: function becomesAlive(numberOfLiveNeighbors) {
-        return numberOfLiveNeighbors === 3;
-      }
+  _createClass(DeadCell, [{
+    key: 'changesState',
+    value: function changesState(numberOfLiveNeighbors) {
+      return this.becomesAlive(numberOfLiveNeighbors);
     }
-  });
+  }, {
+    key: 'isAlive',
+    value: function isAlive() {
+      return false;
+    }
+  }, {
+    key: 'becomesAlive',
+    value: function becomesAlive(numberOfLiveNeighbors) {
+      return numberOfLiveNeighbors === 3;
+    }
+  }]);
 
   return DeadCell;
-})(AbstractCell);
+})(_AbstractCell3['default']);
 
-module.exports = DeadCell;
+exports['default'] = DeadCell;
+module.exports = exports['default'];
 
 },{"./abstractCell":1}],4:[function(require,module,exports){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
 
-var _inherits = function (subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+var _inherits = function (subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; };
 
-var AbstractCell = _interopRequire(require("./abstractCell"));
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _AbstractCell2 = require('./abstractCell');
+
+var _AbstractCell3 = _interopRequireWildcard(_AbstractCell2);
 
 var LiveCell = (function (_AbstractCell) {
   function LiveCell() {
@@ -143,39 +167,45 @@ var LiveCell = (function (_AbstractCell) {
 
   _inherits(LiveCell, _AbstractCell);
 
-  _createClass(LiveCell, {
-    changesState: {
-      value: function changesState(numberOfLiveNeighbors) {
-        return !this.staysAlive(numberOfLiveNeighbors);
-      }
-    },
-    isAlive: {
-      value: function isAlive() {
-        return true;
-      }
-    },
-    staysAlive: {
-      value: function staysAlive(numberOfLiveNeighbors) {
-        return numberOfLiveNeighbors === 2 || numberOfLiveNeighbors === 3;
-      }
+  _createClass(LiveCell, [{
+    key: 'changesState',
+    value: function changesState(numberOfLiveNeighbors) {
+      return !this.staysAlive(numberOfLiveNeighbors);
     }
-  });
+  }, {
+    key: 'isAlive',
+    value: function isAlive() {
+      return true;
+    }
+  }, {
+    key: 'staysAlive',
+    value: function staysAlive(numberOfLiveNeighbors) {
+      return numberOfLiveNeighbors === 2 || numberOfLiveNeighbors === 3;
+    }
+  }]);
 
   return LiveCell;
-})(AbstractCell);
+})(_AbstractCell3['default']);
 
-module.exports = LiveCell;
+exports['default'] = LiveCell;
+module.exports = exports['default'];
 
 },{"./abstractCell":1}],5:[function(require,module,exports){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var Cell = _interopRequire(require("./cell/cell"));
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _Cell = require('./cell/cell');
+
+var _Cell2 = _interopRequireWildcard(_Cell);
 
 var Coordinate = (function () {
   function Coordinate(x, y) {
@@ -184,104 +214,110 @@ var Coordinate = (function () {
     _classCallCheck(this, Coordinate);
 
     if (x < 1 || y < 1) {
-      throw new Error("Invalid coordinates provided: x=" + x + " y=" + y + ".");
+      throw new Error('Invalid coordinates provided: x=' + x + ' y=' + y + '.');
     }
     this.x = x;
     this.y = y;
     if (cell === null) {
-      cell = Cell.createRandom();
+      cell = _Cell2['default'].createRandom();
     }
     this.cell = cell;
     this.neighbors = [];
   }
 
-  _createClass(Coordinate, {
-    equals: {
-      value: function equals(otherCoordinate) {
-        return otherCoordinate.equalsCoordinate(this.x, this.y);
+  _createClass(Coordinate, [{
+    key: 'equals',
+    value: function equals(otherCoordinate) {
+      return otherCoordinate.equalsCoordinate(this.x, this.y);
+    }
+  }, {
+    key: 'equalsCoordinate',
+    value: function equalsCoordinate(otherX, otherY) {
+      return this.x === otherX && this.y === otherY;
+    }
+  }, {
+    key: 'isNeighbor',
+    value: function isNeighbor(otherCoordinate) {
+      return otherCoordinate.isNeighborCoordinate(this.x, this.y);
+    }
+  }, {
+    key: 'isNeighborCoordinate',
+    value: function isNeighborCoordinate(otherX, otherY) {
+      if (this.equalsCoordinate(otherX, otherY)) {
+        return false;
       }
-    },
-    equalsCoordinate: {
-      value: function equalsCoordinate(otherX, otherY) {
-        return this.x === otherX && this.y === otherY;
+
+      if (Math.abs(otherX - this.x) > 1) {
+        return false;
       }
-    },
-    isNeighbor: {
-      value: function isNeighbor(otherCoordinate) {
-        return otherCoordinate.isNeighborCoordinate(this.x, this.y);
+
+      if (Math.abs(otherY - this.y) > 1) {
+        return false;
       }
-    },
-    isNeighborCoordinate: {
-      value: function isNeighborCoordinate(otherX, otherY) {
-        if (this.equalsCoordinate(otherX, otherY)) {
-          return false;
+
+      return true;
+    }
+  }, {
+    key: 'addNeighbor',
+    value: function addNeighbor(coordinate) {
+      this.neighbors.push(coordinate);
+    }
+  }, {
+    key: 'getNeighborsCount',
+    value: function getNeighborsCount() {
+      return this.neighbors.length;
+    }
+  }, {
+    key: 'hasLiveCell',
+    value: function hasLiveCell() {
+      return this.cell.isAlive();
+    }
+  }, {
+    key: 'changesState',
+    value: function changesState() {
+      var numberOfLiveNeighbors = 0;
+
+      this.neighbors.forEach(function (coordinate) {
+        if (coordinate.hasLiveCell()) {
+          numberOfLiveNeighbors += 1;
         }
+      });
 
-        if (Math.abs(otherX - this.x) > 1) {
-          return false;
-        }
-
-        if (Math.abs(otherY - this.y) > 1) {
-          return false;
-        }
-
-        return true;
-      }
-    },
-    addNeighbor: {
-      value: function addNeighbor(coordinate) {
-        this.neighbors.push(coordinate);
-      }
-    },
-    getNeighborsCount: {
-      value: function getNeighborsCount() {
-        return this.neighbors.length;
-      }
-    },
-    hasLiveCell: {
-      value: function hasLiveCell() {
-        return this.cell.isAlive();
-      }
-    },
-    changesState: {
-      value: function changesState() {
-        var numberOfLiveNeighbors = 0;
-
-        this.neighbors.forEach(function (coordinate) {
-          if (coordinate.hasLiveCell()) {
-            numberOfLiveNeighbors += 1;
-          }
-        });
-
-        return this.cell.changesState(numberOfLiveNeighbors);
-      }
-    },
-    nextState: {
-      value: function nextState() {
-        if (this.hasLiveCell()) {
-          this.cell = Cell.createDead();
-        } else {
-          this.cell = Cell.createLive();
-        }
+      return this.cell.changesState(numberOfLiveNeighbors);
+    }
+  }, {
+    key: 'nextState',
+    value: function nextState() {
+      if (this.hasLiveCell()) {
+        this.cell = _Cell2['default'].createDead();
+      } else {
+        this.cell = _Cell2['default'].createLive();
       }
     }
-  });
+  }]);
 
   return Coordinate;
 })();
 
-module.exports = Coordinate;
+exports['default'] = Coordinate;
+module.exports = exports['default'];
 
 },{"./cell/cell":2}],6:[function(require,module,exports){
-"use strict";
+'use strict';
 
-var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
+var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { 'default': obj }; };
 
-var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-var Coordinate = _interopRequire(require("./coordinate"));
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _Coordinate = require('./coordinate');
+
+var _Coordinate2 = _interopRequireWildcard(_Coordinate);
 
 var World = (function () {
   function World() {
@@ -293,78 +329,78 @@ var World = (function () {
     this.create(x, y);
   }
 
-  _createClass(World, {
-    create: {
-      value: function create() {
-        var x = arguments[0] === undefined ? 0 : arguments[0];
-        var y = arguments[1] === undefined ? 0 : arguments[1];
+  _createClass(World, [{
+    key: 'create',
+    value: function create() {
+      var x = arguments[0] === undefined ? 0 : arguments[0];
+      var y = arguments[1] === undefined ? 0 : arguments[1];
 
-        this.createCoordinates(x, y);
-        this.addNeighborsToCoordinates();
-      }
-    },
-    createCoordinates: {
-      value: function createCoordinates(x, y) {
-        this.coordinates = [];
-        for (var i = 1; i <= x; i++) {
-          for (var j = 1; j <= y; j++) {
-            this.coordinates.push(new Coordinate(i, j));
-          }
+      this.createCoordinates(x, y);
+      this.addNeighborsToCoordinates();
+    }
+  }, {
+    key: 'createCoordinates',
+    value: function createCoordinates(x, y) {
+      this.coordinates = [];
+      for (var i = 1; i <= x; i++) {
+        for (var j = 1; j <= y; j++) {
+          this.coordinates.push(new _Coordinate2['default'](i, j));
         }
-      }
-    },
-    addNeighborsToCoordinates: {
-      value: function addNeighborsToCoordinates() {
-        var _this = this;
-
-        this.coordinates.forEach(function (coordinate) {
-          _this.coordinates.forEach(function (otherCoordinate) {
-            if (coordinate.isNeighbor(otherCoordinate)) {
-              coordinate.addNeighbor(otherCoordinate);
-            }
-          });
-        });
-      }
-    },
-    tick: {
-      value: function tick() {
-        var callbacks = [];
-
-        this.coordinates.forEach(function (coordinate) {
-          if (coordinate.changesState()) {
-            callbacks.push(function () {
-              coordinate.nextState();
-            });
-          }
-        });
-
-        callbacks.forEach(function (callback) {
-          callback();
-        });
-      }
-    },
-    getCoordinateAt: {
-      value: function getCoordinateAt(x, y) {
-        for (var i = 0, _length = this.coordinatesCount(), expectedCoordinate = new Coordinate(x, y); i < _length; i++) {
-          if (this.coordinates[i].equals(expectedCoordinate)) {
-            return this.coordinates[i];
-          }
-        }
-
-        return null;
-      }
-    },
-    coordinatesCount: {
-      value: function coordinatesCount() {
-        return this.coordinates.length;
       }
     }
-  });
+  }, {
+    key: 'addNeighborsToCoordinates',
+    value: function addNeighborsToCoordinates() {
+      var _this = this;
+
+      this.coordinates.forEach(function (coordinate) {
+        _this.coordinates.forEach(function (otherCoordinate) {
+          if (coordinate.isNeighbor(otherCoordinate)) {
+            coordinate.addNeighbor(otherCoordinate);
+          }
+        });
+      });
+    }
+  }, {
+    key: 'tick',
+    value: function tick() {
+      var callbacks = [];
+
+      this.coordinates.forEach(function (coordinate) {
+        if (coordinate.changesState()) {
+          callbacks.push(function () {
+            coordinate.nextState();
+          });
+        }
+      });
+
+      callbacks.forEach(function (callback) {
+        callback();
+      });
+    }
+  }, {
+    key: 'getCoordinateAt',
+    value: function getCoordinateAt(x, y) {
+      for (var i = 0, _length = this.coordinatesCount(), expectedCoordinate = new _Coordinate2['default'](x, y); i < _length; i++) {
+        if (this.coordinates[i].equals(expectedCoordinate)) {
+          return this.coordinates[i];
+        }
+      }
+
+      return null;
+    }
+  }, {
+    key: 'coordinatesCount',
+    value: function coordinatesCount() {
+      return this.coordinates.length;
+    }
+  }]);
 
   return World;
 })();
 
-module.exports = World;
+exports['default'] = World;
+module.exports = exports['default'];
 
 },{"./coordinate":5}]},{},[1,2,3,4,5,6])(6)
 });
