@@ -1,4 +1,4 @@
-Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life-es6.png?branch=master)](https://travis-ci.org/gziolo/game-of-life-es6)
+Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life-es6.png?branch=master)](https://travis-ci.org/gziolo/game-of-life-es6) [![npm version](https://badge.fury.io/js/game-of-life-es6.svg)](http://badge.fury.io/js/game-of-life-es6)
 ============
 ES6 JavaScript algorithm implementation.
 
