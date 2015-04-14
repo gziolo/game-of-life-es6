@@ -2,7 +2,7 @@
   "name": "game-of-life-es6",
   "title": "Game of Life ES6",
   "description": "Conway's Game of life - ES6 JavaScript algorithm implementation",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "gziolo",
   "main": "./dist/bundle.js",
   "directories": {
