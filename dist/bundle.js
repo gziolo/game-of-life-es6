@@ -69,8 +69,9 @@ var Cell = (function () {
   }, {
     key: 'createRandom',
     value: function createRandom() {
-      /*eslint no-undef:0 */
-      if (Math.random() >= 0.5) {
+      var THRESHOLD = 0.5;
+
+      if (Math.random() >= THRESHOLD) {
         return Cell.createLive();
       }
 
@@ -375,7 +376,7 @@ var World = (function () {
       });
 
       callbacks.forEach(function (callback) {
-        callback();
+        return callback();
       });
     }
   }, {
