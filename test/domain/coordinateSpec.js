@@ -44,14 +44,14 @@ describe('Coordinate', function() {
   });
 
   it('should have 0 neighbors', () => {
-    this.coordinate.getNeighborsCount().should.be.equal(0);
+    should.equal(this.coordinate.getNeighborsCount(), 0);
   });
 
   it('should have 2 neighbors when 2 neighbors added', () => {
     this.coordinate.addNeighbor(new Coordinate(2, 2));
     this.coordinate.addNeighbor(new Coordinate(4, 4));
 
-    (this.coordinate.getNeighborsCount()).should.be.equal(2);
+    should.equal(this.coordinate.getNeighborsCount(), 2);
   });
 
   it('should have live cell when live cell injected', () => {

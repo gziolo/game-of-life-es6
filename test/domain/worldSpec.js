@@ -7,13 +7,13 @@ describe('World', function() {
   });
 
   it('should be have no coordinates when created without dimension', () => {
-    this.world.coordinatesCount().should.eql(0);
+    should.equal(this.world.coordinatesCount(), 0);
   });
 
   it('should have exactly 8 coordinates when world created with 4x2 dimension', () => {
     this.world.create(4, 2);
 
-    this.world.coordinatesCount().should.be.equal(8);
+    should.equal(this.world.coordinatesCount(), 8);
   });
 
   it('should have no coordinate at [6,9] when not added', () => {
@@ -33,11 +33,11 @@ describe('World', function() {
   it('should add neighbors to all coordinates', () => {
     this.world.create(3, 3);
 
-    this.world.getCoordinateAt(1, 1).getNeighborsCount().should.be.equal(3);
-    this.world.getCoordinateAt(1, 2).getNeighborsCount().should.be.equal(5);
-    this.world.getCoordinateAt(2, 2).getNeighborsCount().should.be.equal(8);
-    this.world.getCoordinateAt(2, 3).getNeighborsCount().should.be.equal(5);
-    this.world.getCoordinateAt(3, 3).getNeighborsCount().should.be.equal(3);
+    should.equal(this.world.getCoordinateAt(1, 1).getNeighborsCount(), 3);
+    should.equal(this.world.getCoordinateAt(1, 2).getNeighborsCount(), 5);
+    should.equal(this.world.getCoordinateAt(2, 2).getNeighborsCount(), 8);
+    should.equal(this.world.getCoordinateAt(2, 3).getNeighborsCount(), 5);
+    should.equal(this.world.getCoordinateAt(3, 3).getNeighborsCount(), 3);
   });
 
   it('should not generate next state for coordinate when tick called but update rules not met', () => {
