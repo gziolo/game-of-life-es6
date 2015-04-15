@@ -90,7 +90,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Coderetreat](http://coderetreat.org/)
 - [Legacy Code Retreat - Rescuing legacy code without fear](http://legacycoderetreat.typepad.com/)
 
-### Design
+### Code Design
 - [Principles of Object Oriented Design](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
 - [Is Design Dead? - article by Martin Fowler](http://martinfowler.com/articles/designDead.html)
 - [Don't Repeat Yourself](http://c2.com/cgi/wiki?DontRepeatYourself)
@@ -99,18 +99,37 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [The Four Elements of Simple Design](http://www.jbrains.ca/permalink/the-four-elements-of-simple-design)
 
 ### ES6
-- [Traceur](https://github.com/google/traceur-compiler)
-- [An ES6 Module Loader polyfill](https://github.com/ModuleLoader/es6-module-loader)
-- [Traceur-TodoMVC – a Backbone.js app written with ES6](http://addyosmani.com/blog/traceur-todomvc/)
-- [Practical Workflows for ES6 Modules - video by Guy Bedford](https://www.youtube.com/watch?v=0VUjM-jJf2U)
-- [Practical Workflows for ES6 Modules - article by Guy Bedford](http://guybedford.com/practical-workflows-for-es6-modules)
+
 - [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
-- [Classes in ECMAScript 6](http://www.2ality.com/2015/02/es6-classes-final.html)
 - [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
+
+#### Articles
+- [Variables and scoping in ECMAScript 6](http://www.2ality.com/2015/02/es6-scoping.html)
+- [Classes in ECMAScript 6](http://www.2ality.com/2015/02/es6-classes-final.html)
+- [ES6 generators in depth](http://www.2ality.com/2015/03/es6-generators.html)
+- [Iterables and iterators in ECMAScript 6](http://www.2ality.com/2015/02/es6-iteration.html)
+- [ECMAScript 6 modules: the final syntax](http://www.2ality.com/2014/09/es6-modules-final.html)
+- [Practical Workflows for ES6 Modules - article by Guy Bedford](http://guybedford.com/practical-workflows-for-es6-modules)
 - [Author In ES6, Transpile To ES5 As A Build-step: A Workflow For Grunt](http://addyosmani.com/blog/author-in-es6-transpile-to-es5-as-a-build-step-a-workflow-for-grunt/)
 - [Using Grunt & the ES6 Module Transpiler](http://www.thomasboyt.com/2013/06/21/es6-module-transpiler)
 - [ES6 modules today with Babel (6TO5)](http://es6rocks.com/2014/10/es6-modules-today-with-6to5/)
 - [Lint Like It’s 2015 (babel-eslint)](https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48)
+
+#### Books
+- [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read/)
+- [Exploring ES6: Upgrade to the next version of JavaScript](http://exploringjs.com/)
+- [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond)
+- [JavaScript Allongé, The "Six" Edition](https://leanpub.com/javascriptallongesix)
+
+#### Tools
+- [Traceur](https://github.com/google/traceur-compiler)
+- [Babel](https://babeljs.io/)
+- [An ES6 Module Loader polyfill](https://github.com/ModuleLoader/es6-module-loader)
+
+#### Examples
+- [Traceur-TodoMVC – a Backbone.js app written with ES6](http://addyosmani.com/blog/traceur-todomvc/)
+
+[More resources to learn ECMAScript 6!](https://github.com/ericdouglas/ES6-Learning)
 
 ### Grunt tasks
 - [Grunt](http://gruntjs.com/)
