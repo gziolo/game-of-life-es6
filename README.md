@@ -1,6 +1,6 @@
 Conway's Game of life [![Build Status](https://travis-ci.org/gziolo/game-of-life-es6.png?branch=master)](https://travis-ci.org/gziolo/game-of-life-es6) [![npm version](https://badge.fury.io/js/game-of-life-es6.svg)](http://badge.fury.io/js/game-of-life-es6)
 ============
-ES6 JavaScript algorithm implementation.
+ES6 JavaScript algorithm implementation. More details can be found on my blog in the post [Using JavaScript ES6 in practice](http://gziolo.pl/2015/05/13/using-javascript-es6-in-practice/).
 
 ## Installation
 
@@ -102,8 +102,11 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 
 - [Overview of ECMAScript 6 features](https://github.com/lukehoban/es6features)
 - [An aggregation of tooling for ES6](https://github.com/addyosmani/es6-tools)
+- [ECMAScript 6 new features overview & comparison](http://es6-features.org/)
+- [ECMAScript 6 compatibility table](https://kangax.github.io/compat-table/es6/)
 
 #### Articles
+- [Using JavaScript ES6 in practice](http://gziolo.pl/2015/05/13/using-javascript-es6-in-practice/)
 - [Variables and scoping in ECMAScript 6](http://www.2ality.com/2015/02/es6-scoping.html)
 - [Classes in ECMAScript 6](http://www.2ality.com/2015/02/es6-classes-final.html)
 - [ES6 generators in depth](http://www.2ality.com/2015/03/es6-generators.html)
@@ -120,6 +123,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Exploring ES6: Upgrade to the next version of JavaScript](http://exploringjs.com/)
 - [You Don't Know JS: ES6 & Beyond](https://github.com/getify/You-Dont-Know-JS/tree/master/es6%20%26%20beyond)
 - [JavaScript Allongé, The "Six" Edition](https://leanpub.com/javascriptallongesix)
+- [Learn JavaScript Isomorphic App Development](https://leanpub.com/learn-javascript-react-nodejs-es6/)
 
 #### Tools
 - [Traceur](https://github.com/google/traceur-compiler)
