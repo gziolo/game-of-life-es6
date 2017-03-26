@@ -139,7 +139,7 @@ Every piece of knowledge must have a single, unambiguous, authoritative represen
 - [Grunt](http://gruntjs.com/)
 - [ESLint](http://eslint.org/)
 - [Karma](http://karma-runner.github.io/)
-- [Mocha](http://visionmedia.github.io/mocha/)
+- [Mocha](http://mochajs.org/)
 - [ChaiJS online test suite](http://chaijs.com/api/test/)
 - [Sinon docs](http://sinonjs.org/docs/)
 - [Grunt basics](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
